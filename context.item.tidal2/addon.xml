@@ -12,8 +12,7 @@
     <extension point="kodi.context.item" library="context.py">
         <item>
             <label>TIDAL2 ...</label>
-            <visible>System.HasAddon(plugin.audio.tidal-master)</visible>
-            <!-- SubString(ListItem.Path,mytidal) -->
+            <visible>System.HasAddon(plugin.audio.tidal2)</visible>
         </item>
     </extension>
     <extension point="kodi.addon.metadata">
@@ -22,6 +21,6 @@
         <description lang="en">For private use only.</description>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <forum></forum>
-        <source></source>
+        <source>https://github.com/arnesongit/context.item.tidal2</source>
     </extension>
 </addon>
