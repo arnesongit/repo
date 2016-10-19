@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Global Settings -->
+    <string id="30003">Export/Import Path</string>
+    <string id="30004">Enable Remote Debugging</string>
+
+    <string id="30070">Extended Logging</string>
+    <string id="30071">Normal</string>
+    <string id="30072">More Infos</string>
+    <string id="30073">Extended Infos</string>
+    <string id="30074">No Logging</string>
+    <string id="30075">Remote Debug Server</string>
+
+    <!-- Search Settings -->
+    <string id="30080">Blacklists</string>
+    <string id="30081">Fuzzy-Level</string>
+    <string id="30082">Blacklist #1</string>
+    <string id="30083">Blacklist #2</string>
+    <string id="30084">Blacklist #3</string>
+    <string id="30085">Reduce Match-Level for Blacklist Match</string>
+    <string id="30086">Minimum Match-Level "Artist"/"Album Artist"</string>
+    <string id="30087">Factors for Fuzzy Search:</string>
+    <string id="30088">Addition for Favorite Artists</string>
+    <string id="30089">Match only in brackets ( ) or [ ]</string>
+
+    <string id="30101">Artist</string>
+    <string id="30102">Album</string>
+    <string id="30103">Playlist</string>
+    <string id="30104">Track</string>
+    <string id="30105">Video</string>
+    <string id="30106">Artists</string>
+    <string id="30107">Albums</string>
+    <string id="30108">Playlists</string>
+    <string id="30109">Tracks</string>
+    <string id="30110">Videos</string>
+
+    <!-- Program Text -->
+    <string id="30400">Search Again</string>
+    <string id="30401">Search</string>
+    <string id="30402">Album Artist</string>
+    <string id="30403">Album Year</string>
+    <string id="30404">Please login first !</string>
+    <string id="30405">Start</string>
+    <string id="30406">From Position</string>
+    <string id="30407">To Position</string>
+    <string id="30408">Generate Playlist</string>
+    <string id="30409">Destination Playlist for %s</string>
+    <string id="30410">Searching in TIDAL ...</string>
+    <string id="30411">Searching ...</string>
+    <string id="30412">Not Found</string>
+    <string id="30413">%s of %s Items found</string>
+    <string id="30414">Search canceled</string>
+    <string id="30415">Search aborted by user.</string>
+    <string id="30416">Insert found Items to the Playlist ?</string>
+    <string id="30417">Finished</string>
+    <string id="30418">Inserting Tracks into the Playlist ...</string>
+    <string id="30419">Search in TIDAL</string>
+    <string id="30420">Fuzzy Search</string>
+    <string id="30421">Generate Track Playlist</string>
+    <string id="30422">Generate Video Playlist</string>
+    <string id="30423">Addon Settings</string>
+    <string id="30424">ListItem Info</string>
+    <string id="30425">Authorization problem</string>
+    <string id="30426">Export Favorite %s ...</string>
+    <string id="30427">Import Favorite %s ...</string>
+    <string id="30428">{n} exported</string>
+    <string id="30429">{n} imported</string>
+    <string id="30430">Deleting Favorite %s</string>
+    <string id="30431">Remove {n} "{what}" from Favorites ?</string>
+    <string id="30432">Import {what}</string>
+    <string id="30433">Export User-Playlists</string>
+    <string id="30434">Import User-Playlists ...</string>
+    <string id="30435">Export User-Playlist</string>
+    <string id="30436"></string>
+    <string id="30437"></string>
+    <string id="30438"></string>
+    <string id="30439"></string>
+    <string id="30440"></string>
+    <string id="30441"></string>
+    <string id="30442"></string>
+    <string id="30443"></string>
+    <string id="30444"></string>
+    <string id="30445"></string>
+    <string id="30446"></string>
+    <string id="30447"></string>
+    <string id="30448"></string>
+    <string id="30449"></string>
+
+</strings>

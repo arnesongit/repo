@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="context.item.tidal2" name="TIDAL Search" version="0.1.1" provider-name="arneson">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.requests" version="2.3.0"/>
+        <import addon="script.module.routing" version="0.1.0"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+        <import addon="plugin.audio.tidal2" version="2.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py"/>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="kodi.context.item" library="context.py">
+        <item>
+            <label>TIDAL...</label>
+            <visible>System.HasAddon(plugin.audio.tidal-master)</visible>
+            <!-- SubString(ListItem.Path,mytidal) -->
+        </item>
+    </extension>
+    <extension point="kodi.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Context menu to search TIDAL content.</summary>
+        <description lang="en">For private use only.</description>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum></forum>
+        <source></source>
+    </extension>
+</addon>

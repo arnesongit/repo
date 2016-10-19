@@ -1,0 +1,20 @@
+
+[B]0.1.1[/B]
+
+- Renamed to context.item.tidal2
+- Works now with Addon plugin.audio.tidal2
+
+[B]0.1.0[/B]
+
+- Initial Release.
+
+- TIDAL Context Menue Function:
+  - Added a "search_extra" function which can be called from other plugins and context menu addons
+    to search media in the TIDAL Database.
+  - The result list is sorted by a "MatchLevel" which is calculated for each search result item
+  - Using the Python Module fuzzywuzzy 0.10.0 from https://github.com/seatgeek/fuzzywuzzy
+    to calculate the MatchLevels using the Levenshtein Distance to compare strings.
+  - Added 3 "Blacklists" to define unwanted keywords in search result items.
+    The Blacklists can be defined in the Addon Settings.
+  - If a keyword of a blacklist is found in a search result item the MatchLevel of this
+    Item can be reduced or the item can be completely removed from the search result.
