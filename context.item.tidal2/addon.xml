@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.item.tidal2" name="TIDAL Search" version="0.1.1" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.1" provider-name="arneson">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
         <import addon="script.module.requests" version="2.3.0"/>
@@ -11,7 +11,7 @@
     <extension point="xbmc.python.module" library="lib"/>
     <extension point="kodi.context.item" library="context.py">
         <item>
-            <label>TIDAL...</label>
+            <label>TIDAL2 ...</label>
             <visible>System.HasAddon(plugin.audio.tidal-master)</visible>
             <!-- SubString(ListItem.Path,mytidal) -->
         </item>
