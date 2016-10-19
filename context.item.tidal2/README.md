@@ -2,7 +2,7 @@
 
 This is a Kodi Context Menu Addon to search for TIDAL content.
 
-This Addon requires my Kodi TIDAL2 Addon [plugin.audio.tidal2](https://github.com/arnesongit/python-tidal2)
+This Addon requires my Kodi TIDAL2 Addon [plugin.audio.tidal2](https://github.com/arnesongit/plugin.audio.tidal2)
 
 See [changelog.txt](https://github.com/arnesongit/context.item.tidal2/blob/master/changelog.txt) for informations.
 
