@@ -8,7 +8,7 @@
         <import addon="plugin.audio.tidal2" version="2.0.0-beta4"/>
     </requires>
     <extension point="kodi.context.item" library="context.py">
-        <item >
+        <item>
             <label>TIDAL2 ...</label>
             <visible>System.HasAddon(plugin.audio.tidal2)</visible>
         </item>
