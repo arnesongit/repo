@@ -5,6 +5,7 @@
     <import addon="script.module.requests" version="2.3.0"/>
     <import addon="script.module.routing" version="0.1.0"/>
     <import addon="script.module.unidecode" version="0.4.16"/>
+    <import addon="plugin.audio.tidal2" version="2.0.0-beta4"/>
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
@@ -12,6 +13,7 @@
       <visible>true</visible>
     </item>
   </extension>
+  <extension point="xbmc.python.module" library="lib"/>
   <extension point="kodi.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Context menu to search TIDAL content.</summary>
