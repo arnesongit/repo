@@ -43,7 +43,7 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
     if [ ! -f "$REPO/$name/$name-$VERSION.zip" ]; then
         if [ -f "$SRCDIR/$name/addon.xml" ]; then
             cd $SRCDIR
-            zip -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x \*.pyo -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject*
+            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x \*.pyo -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject*
     	else
             cd $REPO
             zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip
