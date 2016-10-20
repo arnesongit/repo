@@ -2,7 +2,8 @@
 # Author: arneson
 # This Script Generates a new Inventory for a new Version or New Plugin
 
-REPO=~/git/repo
+SRCDIR=~/kodi/addons
+REPO=~/git/repository.arneson
 
 if [ "$1" != "" ]
 then
@@ -29,18 +30,30 @@ cd $REPO
 echo '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' >$REPO/addons.xml
 echo '<addons>' >> $REPO/addons.xml
 for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "^\.$"|cut -d \/ -f 2 `; do
-   echo "Adding $name"
-   if [ -f "~/kodi/addons/$name/addon.xml" ]; then
-     cp -R -p ~/kodi/addons/$name/* $name
-   fi
-   find $name -iname "*.pyo" -exec rm {} \;
-   find $name -iname ".DS_Store" -exec rm {} \;
-   VERSION=`cat $name/addon.xml|grep \<addon|grep $name |tr 'A-Z' 'a-z'|sed 's/.*version="\([^"]*\)"*.*/\1/g'`
-     if [ ! -f "$name/$name-$VERSION.zip" ]; then
-       zip -q -r $name/$name-$VERSION.zip $name -x \*.zip
-     fi
-   cat $name/addon.xml|grep -v "<?xml " >> $REPO/addons.xml
-   echo "" >> $REPO/addons.xml
- done
- echo "</addons>" >> $REPO/addons.xml
- md5 -r  $REPO/addons.xml > $REPO/addons.xml.md5
+    if [ -f "$SRCDIR/$name/addon.xml" ]; then
+        cp -p $SRCDIR/$name/addon.xml  $REPO/$name
+        cp -p $SRCDIR/$name/icon.png   $REPO/$name
+        cp -p $SRCDIR/$name/fanart.jpg $REPO/$name
+    fi
+    VERSION=`cat $REPO/$name/addon.xml|grep \<addon|grep $name |tr 'A-Z' 'a-z'|sed 's/.*version="\([^"]*\)"*.*/\1/g'`
+    echo "Adding $name V$VERSION"
+    if [ -f "$SRCDIR/$name/changelog.txt" ]; then
+        cp -p $SRCDIR/$name/changelog.txt $REPO/$name/changelog-$VERSION.txt
+    fi
+    if [ ! -f "$REPO/$name/$name-$VERSION.zip" ]; then
+        if [ -f "$SRCDIR/$name/addon.xml" ]; then
+            cd $SRCDIR
+            zip -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x \*.pyo -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject*
+    	else
+            cd $REPO
+            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip
+    	fi
+        cd $REPO/$name
+        md5 -r $name-$VERSION.zip > $name-$VERSION.zip.md5
+    fi
+    cat $REPO/$name/addon.xml|grep -v "<?xml " >> $REPO/addons.xml
+    echo "" >> $REPO/addons.xml
+done
+echo "</addons>" >> $REPO/addons.xml
+cd $REPO
+md5 -r  addons.xml > addons.xml.md5
