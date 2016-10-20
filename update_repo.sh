@@ -1,7 +1,9 @@
 #!/bin/bash
-# Author: L0RE
+# Author: arneson
 # This Script Generates a new Inventory for a new Version or New Plugin
+
 REPO=~/git/repo
+
 if [ "$1" != "" ]
 then
     REPO="$1"
