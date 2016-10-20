@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.1" provider-name="arneson">
-    <requires>
-        <import addon="xbmc.python" version="2.20.0"/>
-        <import addon="script.module.requests" version="2.3.0"/>
-        <import addon="script.module.routing" version="0.1.0"/>
-        <import addon="script.module.unidecode" version="0.4.16"/>
-        <import addon="plugin.audio.tidal2" version="2.0.0-beta4"/>
-    </requires>
-    <extension point="kodi.context.item" library="context.py">
-        <item>
-            <label>TIDAL2 ...</label>
-            <visible>System.HasAddon(plugin.audio.tidal2)</visible>
-        </item>
-    </extension>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>audio</provides>
-    </extension>
-    <extension point="xbmc.python.module" library="lib"/>
-    <extension point="kodi.addon.metadata">
-        <summary lang="en">Context menu to search TIDAL content.</summary>
-        <description lang="en">For private use only.</description>
-        <disclaimer lang="en">This is an unofficial client and is not supported nor endorsed by TIDAL.</disclaimer>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <platform>all</platform>
-        <forum></forum>
-        <source>https://github.com/arnesongit/context.item.tidal2</source>
-    </extension>
-</addon>
-
 <addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta4" provider-name="arneson">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
