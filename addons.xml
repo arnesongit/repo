@@ -26,7 +26,7 @@
         <platform>all</platform>
         <forum></forum>
         <source>https://github.com/arnesongit/context.item.tidal2</source>
-    <extension>
+    </extension>
 </addon>
 
 <addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta4" provider-name="arneson">

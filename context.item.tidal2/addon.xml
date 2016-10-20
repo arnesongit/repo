@@ -25,5 +25,5 @@
         <platform>all</platform>
         <forum></forum>
         <source>https://github.com/arnesongit/context.item.tidal2</source>
-    <extension>
+    </extension>
 </addon>
