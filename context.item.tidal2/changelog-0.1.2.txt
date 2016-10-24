@@ -1,16 +1,12 @@
-[B]0.1.2[/B]
+v0.1.2
+- Prepared for repository
 
-- Prepared for my repo
-
-[B]0.1.1[/B]
-
+v0.1.1
 - Renamed to context.item.tidal2
 - Works now with Addon plugin.audio.tidal2
 
-[B]0.1.0[/B]
-
+v0.1.0
 - Initial Release.
-
 - TIDAL Context Menue Function:
   - Added a "search_extra" function which can be called from other plugins and context menu addons
     to search media in the TIDAL Database.

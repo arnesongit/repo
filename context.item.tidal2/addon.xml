@@ -15,12 +15,24 @@
   </extension>
   <extension point="xbmc.python.pluginsource" library="addon.py"/>
   <extension point="xbmc.python.module" library="lib"/>
-  <extension point="kodi.addon.metadata">
+  <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Context menu to search TIDAL content.</summary>
+    <summary lang="de">Kontext-Menü für TIDAL-Suche.</summary>
     <description lang="en">Needs TIDAL2 Addon installed and activated.</description>
+    <description lang="de">Benötigt das Addon TIDAL2.</description>
+    <disclaimer lang="en">This is an unofficial client and is not supported nor endorsed by TIDAL.</disclaimer>
+    <disclaimer lang="de">Dies ist eine inoffizieller Client, der von TIDAL nicht unterstützt wird.</disclaimer>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
+    <news>
+v0.1.2
+- Prepared for repository
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>
