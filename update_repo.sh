@@ -34,6 +34,7 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
         cp -p $SRCDIR/$name/addon.xml  $REPO/$name
         cp -p $SRCDIR/$name/icon.png   $REPO/$name
         cp -p $SRCDIR/$name/fanart.jpg $REPO/$name
+        xbmc-xml2po -s $SRCDIR/$name
     fi
     VERSION=`cat $REPO/$name/addon.xml|grep \<addon|grep $name |tr 'A-Z' 'a-z'|sed 's/.*version="\([^"]*\)"*.*/\1/g'`
     echo "Adding $name V$VERSION"
@@ -43,7 +44,7 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
     if [ ! -f "$REPO/$name/$name-$VERSION.zip" ]; then
         if [ -f "$SRCDIR/$name/addon.xml" ]; then
             cd $SRCDIR
-            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x \*.pyo -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject*
+            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x *build* -x *.externalTool* -x \*.pyo -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject* -x \*.pxm -x *strings.xml
     	else
             cd $REPO
             zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip
