@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.2" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.3" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
     <import addon="script.module.routing" version="0.1.0"/>
     <import addon="script.module.unidecode" version="0.4.16"/>
-    <import addon="plugin.audio.tidal2" version="2.0.0-beta4"/>
+    <import addon="plugin.audio.tidal2" version="2.0.0-beta5"/>
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
@@ -27,8 +27,8 @@
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
-v0.1.2
-- Prepared for repository
+v0.1.3
+- Update for TIDAL2 v2.0.0-beta5
     </news>
     <assets>
       <icon>resources/icon.png</icon>

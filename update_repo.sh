@@ -34,6 +34,12 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
         cp -p $SRCDIR/$name/addon.xml  $REPO/$name
         cp -p $SRCDIR/$name/icon.png   $REPO/$name
         cp -p $SRCDIR/$name/fanart.jpg $REPO/$name
+        if [ ! -d "$REPO/$name/resources" ]; then
+            mkdir $REPO/$name/resources
+        fi
+        cp -p $SRCDIR/$name/resources/icon.png        $REPO/$name/resources/
+        cp -p $SRCDIR/$name/resources/fanart.jpg      $REPO/$name/resources/
+        cp -p $SRCDIR/$name/resources/screenshot*.jpg $REPO/$name/resources/
         xbmc-xml2po -s $SRCDIR/$name
     fi
     VERSION=`cat $REPO/$name/addon.xml|grep \<addon|grep $name |tr 'A-Z' 'a-z'|sed 's/.*version="\([^"]*\)"*.*/\1/g'`
@@ -48,7 +54,7 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
     	else
             cd $REPO
             zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip
-    	fi
+        fi
         cd $REPO/$name
         md5 -r $name-$VERSION.zip > $name-$VERSION.zip.md5
     fi
