@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.3" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.4" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -27,6 +27,8 @@
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
+v0.1.4 (2016-11-23)
+- Update for TIDAL2 v2.0.0-beta7
 v0.1.3
 - Update for TIDAL2 v2.0.0-beta5
     </news>
