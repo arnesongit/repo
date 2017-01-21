@@ -1,0 +1,74 @@
+v2.0.0-beta9 (2017-01-21)
+- Page mode for Master Albums folder
+- Set MQA in blue color into Labels of Master Albums and Tracks
+- Keep Username for next login if password is not saved into settings
+
+v2.0.0-beta8 (2017-01-18)
+- Support for Master Quality Audio (MQA)
+- Support for Apple Lossless Audio (ALAC)
+- Added RTMP Streaming for HIGH/LOW Quality
+- Added "Master Albums" folder to the "What's New" folder
+- Add "(MQA)" to Labels of Master Albums
+- Playing Edited Tracks (new in TIDAL iOS App)
+
+v2.0.0-beta7 (2016-11-23)
+- Support for Videos in Albums
+- Optimized Album Buffer Cache
+
+v2.0.0-beta6 (2016-10-25)
+- Fixed Search functions to work with Krypton
+
+v2.0.0-beta5 (2016-10-22)
+- Fixed GetDirectory() error for Search functions and other Folders
+  which don't show a list (Artist bio).
+- Settings to enable/disable colors and marked favorites in labels
+- Mark Favorites as <label text> instead of Bold if color mode is disabled
+  because the Kodi Remote Apps don't support Kodi format tags in labels.
+- Show User Playlists in labels of Promotion Video items.
+- Setting to enable/disable User Playlist names in labels
+- Context Menu "Open Playlist (Audio only)" to play only audio for videos in playlists.
+- Preparations for Kodi Krypton
+
+v2.0.0-beta4
+- Renamed to TIDAL2 (from plugin.audio.wimp to plugin.audio.tidal2)
+- Create/Edit/Delete User Playlist
+- Add/Remove Items from Favorites
+- Cache files for UserPlaylists and Favorites
+- Name of User Playlists in Labels if Track/Video is a playlist item
+- Favorites are marked in Labels
+- Colored Labels:
+  a) Folders are Blue
+  b) Favorites are Yellow
+  c) User Playlists are Green
+  d) Locked Streams are Red
+- Cache for Album Data for correct year in Track items
+
+v1.3.0 (unreleased)
+- Using new Login-Token for all content
+- Added Video playback
+- Seperate settings for Subscription Type, Music Quality and Video Quality
+- Added Support to edit Favorites and User Playlists
+- Added Recommended Tracks/Videos to context menue
+- Added Artist Bio on artist page
+- Added Setting "Max. number of list items per page"
+- Added German translation
+- Added Trial Mode (30 seconds playback without login)
+
+v1.2.2
+- Fixed album listing due to site changes
+
+v1.2.0
+- WiMP is now TIDAL: changed name and branding
+- Added album year info
+- Fixed featured albums view
+
+v1.1.1
+- Fixed playback of streams served from tidal
+- Improved login functionality
+- Changed search dialog to a directory
+
+v1.1.0
+- Added TIDAL support
+- Added Lossless support
+- Added "What's New", "Moods" and genre browsing
+- Added options for saving username/password in settings
