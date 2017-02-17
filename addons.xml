@@ -107,7 +107,7 @@ v2.0.0-beta10 (2017-01-30)
   </extension>
 </addon>
 
-<addon id="repository.arneson" name="TIDAL2 Addons by arneson" version="0.1.1" provider-name="arneson">
+<addon id="repository.arneson" name="TIDAL2 Addons by arneson" version="0.1.2" provider-name="arneson">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>

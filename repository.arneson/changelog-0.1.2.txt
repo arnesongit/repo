@@ -1,0 +1,11 @@
+v0.1.2 (2017-02-17)
+
+- Added new Script Addon script.change.sysvolume
+
+[B]0.1.1[/B]
+
+- Changes to work with github
+
+[B]0.1.0[/B]
+
+- First Version of my repository

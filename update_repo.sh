@@ -53,7 +53,7 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
             zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x *build* -x *.externalTool* -x \*.pyo -x \*.pyc -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject* -x \*.pxm -x *strings.xml
     	else
             cd $REPO
-            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip
+            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x \*.md5
         fi
         cd $REPO/$name
         md5 -r $name-$VERSION.zip > $name-$VERSION.zip.md5
