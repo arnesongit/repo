@@ -44,10 +44,10 @@ for name in `find . -maxdepth 1 -type d |grep -v \.git|grep -v addons|egrep -v "
     fi
     VERSION=`cat $REPO/$name/addon.xml|grep \<addon|grep $name |tr 'A-Z' 'a-z'|sed 's/.*version="\([^"]*\)"*.*/\1/g'`
     echo "Adding $name V$VERSION"
-    if [ -f "$SRCDIR/$name/changelog.txt" ]; then
-        cp -p $SRCDIR/$name/changelog.txt $REPO/$name/changelog-$VERSION.txt
-    fi
     if [ ! -f "$REPO/$name/$name-$VERSION.zip" ]; then
+        if [ -f "$SRCDIR/$name/changelog.txt" ]; then
+            cp -p $SRCDIR/$name/changelog.txt $REPO/$name/changelog-$VERSION.txt
+        fi
         if [ -f "$SRCDIR/$name/addon.xml" ]; then
             cd $SRCDIR
             zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x *build* -x *.externalTool* -x \*.pyo -x \*.pyc -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject* -x \*.pxm -x *strings.xml
