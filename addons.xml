@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.8" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.9" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
     <import addon="script.module.routing" version="0.1.0"/>
     <import addon="script.module.unidecode" version="0.4.16"/>
-    <import addon="plugin.audio.tidal2" version="2.0.0-beta11"/>
+    <import addon="plugin.audio.tidal2" version="2.0.0-beta13"/>
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
@@ -28,18 +28,11 @@
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
-v0.1.8 (2017-03-11)
-- Some changes for German and English texts
-- Remember used Playlists for "Search for New Music"
-
-v0.1.7 (2017-02-28)
-- Fixed problem with "Search for Artist News ..." when no default playlist is set.
-
-v0.1.6 (2017-02-27)
-- New context menu function "Search for Artist News ..." for Favorite Artists.
-  This function searchs for new Albums, Tracks and Videos for your Favorite Artists
-  and inserts all new items into Playlists.
-- Moved lib folder into resources for new Krypton Addon file structure
+v0.1.9 (2017-04-04)
+- Ignore HTTP errors during "Search for New Music"
+- Faster "Search for New Music" because it runs now in multiple background threads
+- Cleanup Debug-Logging Code, Using debug module from TIDAL2 Addon
+- Updated Module fuzzywuzzy to version 0.15.0 from https://github.com/seatgeek/fuzzywuzzy
     </news>
     <assets>
       <icon>resources/icon.png</icon>
@@ -48,7 +41,7 @@ v0.1.6 (2017-02-27)
   </extension>
 </addon>
 
-<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta12" provider-name="arneson">
+<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta13" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -75,20 +68,11 @@ Es wird ein Abbonement benötigt. Siehe tidal.com für Details.</description>
     <forum>http://forum.xbmc.org/showthread.php?tid=200555</forum>
     <source>https://github.com/arnesongit/plugin.audio.tidal2</source>
     <news>
-v2.0.0-beta12 (2017-02-27)
-- Backward Compatibility down to XBMC Gotham 13.2
-- Use item infos "userrating" and "mediatype" only on Krypton version
-- Moved lib folder into resources for new Krypton Addon file structure
-
-v2.0.0-beta11 (2017-02-17)
-- Fixes in ALbum Playlist handling:
-  - Add first available track into Album Playlist and not with album_id + 1
-  - Sorting Playlist by Artist, Year, Title when Album Playlist is copied into a new Playlist
-- Prevent update of the Favorites cache file if Favorites are unchanged
-- Fixed problem with Recommended Tracks/Videos and Track/Artist Radio
-- Changes for Krypton:
-  - Set ListItem.UserRating with TIDAL Rating
-  - Set "mediatype" in ListItems for artists/albums/songs/musicvideos
+v2.0.0-beta13 (2017-04-04)
+- Mark Favorite Artists in Favorite Albums and Favorite Tracks lists
+- Fixed problem with Playlists without description
+- Cleanup Debug-Logging code
+- Fixed loop problem if a Playlist or Album contains less items as specified
     </news>
     <assets>
       <icon>resources/icon.png</icon>
