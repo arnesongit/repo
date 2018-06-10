@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.10" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.11" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -28,8 +28,8 @@
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
-v0.1.10 (2017-09-18)
-- Fixed Unicode problem if Windows user name contains special characters
+v0.1.11 (2018-06-09)
+- Artists can now be locked for "Search for New Music"
     </news>
     <assets>
       <icon>resources/icon.png</icon>
@@ -38,7 +38,7 @@ v0.1.10 (2017-09-18)
   </extension>
 </addon>
 
-<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta16" provider-name="arneson">
+<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta17" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -66,9 +66,8 @@ Es wird ein Abbonement benötigt. Siehe tidal.com für Details.</description>
     <forum>http://forum.xbmc.org/showthread.php?tid=200555</forum>
     <source>https://github.com/arnesongit/plugin.audio.tidal2</source>
     <news>
-v2.0.0-beta16 (2017-09-18)
-- Fixed Unicode problem if Windows user name contains special characters
-- Added Context Menu Function "Clear Playlist" to remove all items from a User Playlist
+v2.0.0-beta17 (2018-06-09)
+- Artists can now be locked for "Search for New Music"
     </news>
     <assets>
       <icon>resources/icon.png</icon>

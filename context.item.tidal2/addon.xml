@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.10" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.11" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -27,8 +27,8 @@
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
-v0.1.10 (2017-09-18)
-- Fixed Unicode problem if Windows user name contains special characters
+v0.1.11 (2018-06-09)
+- Artists can now be locked for "Search for New Music"
     </news>
     <assets>
       <icon>resources/icon.png</icon>
