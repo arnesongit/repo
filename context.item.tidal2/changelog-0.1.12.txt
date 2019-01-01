@@ -1,0 +1,60 @@
+v0.1.12 (2018-12-31)
+- First Changes für Kodi 18.x compatibility:
+  - BusyDialog is not allowed anymore, using DialogProgress instead
+  - xbmc.abortRequested is depricated, now using xbmc.Monitor().waitForAbort()
+  - Removed '%s' from any line in strings.xml
+
+v0.1.11 (2018-06-09)
+- Artists can now be locked for "Search for New Music"
+
+v0.1.10 (2017-09-18)
+- Fixed Unicode problem if Windows user name contains special characters
+
+v0.1.9 (2017-04-04)
+- Ignore HTTP errors during "Search for New Music"
+- Faster "Search for New Music" because it runs now in multiple background threads
+- Cleanup Debug-Logging Code, Using debug module from TIDAL2 Addon
+- Updated Module fuzzywuzzy to version 0.15.0 from https://github.com/seatgeek/fuzzywuzzy
+
+v0.1.8 (2017-03-11)
+- Some changes for German and English texts
+- Remember used Playlists for "Search for New Music"
+
+v0.1.7 (2017-02-28)
+- Fixed problem with "Search for Artist News ..." when no default playlist is set.
+
+v0.1.6 (2017-02-27)
+- New context menu function "Search for Artist News ..." for Favorite Artists.
+  This function searchs for new Albums, Tracks and Videos for your Favorite Artists
+  and inserts all new items into Playlists.
+- Moved lib folder into resources for new Krypton Addon file structure
+
+v0.1.5 (2017-02-17)
+- Update for TIDAL2 v2.0.0-beta11
+- Added function to delete all Favorites
+
+v0.1.4 (2016-11-23)
+- Update for TIDAL2 v2.0.0-beta7
+
+v0.1.3
+- Update for TIDAL2 v2.0.0-beta5
+
+v0.1.2
+- Prepared for repository
+
+v0.1.1
+- Renamed to context.item.tidal2
+- Works now with Addon plugin.audio.tidal2
+
+v0.1.0
+- Initial Release.
+- TIDAL Context Menue Function:
+  - Added a "search_extra" function which can be called from other plugins and context menu addons
+    to search media in the TIDAL Database.
+  - The result list is sorted by a "MatchLevel" which is calculated for each search result item
+  - Using the Python Module fuzzywuzzy 0.10.0 from https://github.com/seatgeek/fuzzywuzzy
+    to calculate the MatchLevels using the Levenshtein Distance to compare strings.
+  - Added 3 "Blacklists" to define unwanted keywords in search result items.
+    The Blacklists can be defined in the Addon Settings.
+  - If a keyword of a blacklist is found in a search result item the MatchLevel of this
+    Item can be reduced or the item can be completely removed from the search result.

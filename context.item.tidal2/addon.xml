@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.11" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.12" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -27,8 +27,11 @@
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
-v0.1.11 (2018-06-09)
-- Artists can now be locked for "Search for New Music"
+v0.1.12 (2018-12-31)
+- First Changes für Kodi 18.x compatibility:
+  - BusyDialog is not allowed anymore, using DialogProgress instead
+  - xbmc.abortRequested is depricated, now using xbmc.Monitor().waitForAbort()
+  - Removed '%s' from any line in strings.xml
     </news>
     <assets>
       <icon>resources/icon.png</icon>

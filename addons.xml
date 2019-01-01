@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.11" provider-name="arneson">
-  <requires>
-    <import addon="xbmc.python" version="2.20.0"/>
-    <import addon="script.module.requests" version="2.3.0"/>
-    <import addon="script.module.routing" version="0.1.0"/>
-    <import addon="script.module.unidecode" version="0.4.16"/>
-    <import addon="plugin.audio.tidal2" version="2.0.0-beta13"/>
-  </requires>
-  <extension point="kodi.context.item" library="context.py">
-    <item>
-      <label>30001</label>
-      <visible>true</visible>
-    </item>
-  </extension>
-  <extension point="xbmc.python.pluginsource" library="addon.py"/>
-  <extension point="xbmc.python.module" library="resources/lib"/>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Context menu to search TIDAL content.</summary>
-    <summary lang="de">Kontext-Menü für TIDAL-Suche.</summary>
-    <description lang="en">Needs TIDAL2 Addon installed and activated.</description>
-    <description lang="de">Benötigt das Addon TIDAL2.</description>
-    <disclaimer lang="en">This is an unofficial client and is not supported nor endorsed by TIDAL.</disclaimer>
-    <disclaimer lang="de">Dies ist eine inoffizieller Client, der von TIDAL nicht unterstützt wird.</disclaimer>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <forum></forum>
-    <source>https://github.com/arnesongit/context.item.tidal2</source>
-    <news>
-v0.1.11 (2018-06-09)
-- Artists can now be locked for "Search for New Music"
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta17" provider-name="arneson">
+<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta18" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -66,8 +28,19 @@ Es wird ein Abbonement benötigt. Siehe tidal.com für Details.</description>
     <forum>http://forum.xbmc.org/showthread.php?tid=200555</forum>
     <source>https://github.com/arnesongit/plugin.audio.tidal2</source>
     <news>
-v2.0.0-beta17 (2018-06-09)
-- Artists can now be locked for "Search for New Music"
+v2.0.0-beta18 (2018-12-31)
+- Fixed Artist Bio
+- Using new SquareImage property of Playlists as Cover Image
+- Removed TIDAL Discovery, because it is not supported anymore
+- Added Menu "Suggestions for me" to show Suggestions from the TIDAL Homepage
+- Show "Release Date: mm/dd/yyyy" in label if album release date is in future
+  and Addon Setting "Show Album Year in Labels" is enabled.
+- First Changes für Kodi 18.x compatibility:
+  - BusyDialog is not allowed anymore, using DialogProgressBG instead
+  - xbmc.abortRequested is depricated, now using xbmc.Monitor().waitForAbort()
+  - Adding 'music' infos to Video items
+  - Removed '%s' from any line in strings.xml
+  - Plugin folder items now end with '/', otherwise ActivateWindow() in favorites won't work
     </news>
     <assets>
       <icon>resources/icon.png</icon>
@@ -119,6 +92,47 @@ v2.0.0-beta17 (2018-06-09)
     <news>
 v0.1.0 (2017-02-12)
 - Initial Release.
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.12" provider-name="arneson">
+  <requires>
+    <import addon="xbmc.python" version="2.20.0"/>
+    <import addon="script.module.requests" version="2.3.0"/>
+    <import addon="script.module.routing" version="0.1.0"/>
+    <import addon="script.module.unidecode" version="0.4.16"/>
+    <import addon="plugin.audio.tidal2" version="2.0.0-beta13"/>
+  </requires>
+  <extension point="kodi.context.item" library="context.py">
+    <item>
+      <label>30001</label>
+      <visible>true</visible>
+    </item>
+  </extension>
+  <extension point="xbmc.python.pluginsource" library="addon.py"/>
+  <extension point="xbmc.python.module" library="resources/lib"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Context menu to search TIDAL content.</summary>
+    <summary lang="de">Kontext-Menü für TIDAL-Suche.</summary>
+    <description lang="en">Needs TIDAL2 Addon installed and activated.</description>
+    <description lang="de">Benötigt das Addon TIDAL2.</description>
+    <disclaimer lang="en">This is an unofficial client and is not supported nor endorsed by TIDAL.</disclaimer>
+    <disclaimer lang="de">Dies ist eine inoffizieller Client, der von TIDAL nicht unterstützt wird.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <source>https://github.com/arnesongit/context.item.tidal2</source>
+    <news>
+v0.1.12 (2018-12-31)
+- First Changes für Kodi 18.x compatibility:
+  - BusyDialog is not allowed anymore, using DialogProgress instead
+  - xbmc.abortRequested is depricated, now using xbmc.Monitor().waitForAbort()
+  - Removed '%s' from any line in strings.xml
     </news>
     <assets>
       <icon>resources/icon.png</icon>
