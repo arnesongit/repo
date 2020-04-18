@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta19" provider-name="arneson">
+<addon id="plugin.audio.tidal2" name="TIDAL2" version="2.0.0-beta20" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -28,11 +28,10 @@ Es wird ein Abbonement benötigt. Siehe tidal.com für Details.</description>
     <forum>http://forum.xbmc.org/showthread.php?tid=200555</forum>
     <source>https://github.com/arnesongit/plugin.audio.tidal2</source>
     <news>
-v2.0.0-beta19 (2019-09-13)
-- New login token for MQA playback
-- Fixes:
-  - user_playlist_toggle() and favorite_toggle() get correct id numbers now
-  - Changed playlists are now detected correctly to refresh the Playlist Cache
+v2.0.0-beta20 (2020-04-18)
+- Added Videos to "Suggestions for me"
+- Fixed missing "Explicit" status in Album Playlists
+- Fixed number of tracks and videos for user playlists
     </news>
     <assets>
       <icon>resources/icon.png</icon>
@@ -92,7 +91,7 @@ v0.1.0 (2017-02-12)
   </extension>
 </addon>
 
-<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.12" provider-name="arneson">
+<addon id="context.item.tidal2" name="TIDAL2 Search" version="0.1.13" provider-name="arneson">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.requests" version="2.3.0"/>
@@ -120,11 +119,8 @@ v0.1.0 (2017-02-12)
     <forum></forum>
     <source>https://github.com/arnesongit/context.item.tidal2</source>
     <news>
-v0.1.12 (2018-12-31)
-- First Changes für Kodi 18.x compatibility:
-  - BusyDialog is not allowed anymore, using DialogProgress instead
-  - xbmc.abortRequested is depricated, now using xbmc.Monitor().waitForAbort()
-  - Removed '%s' from any line in strings.xml
+v0.1.13 (2020-04-18)
+- Fixed unicode problems during search
     </news>
     <assets>
       <icon>resources/icon.png</icon>
