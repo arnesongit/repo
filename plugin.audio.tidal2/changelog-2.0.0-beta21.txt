@@ -1,0 +1,160 @@
+v2.0.0-beta21 (2020-11-09)
+- Removed Album Cache because it isn't necessary anymore
+- Code cleanup in TIDAL api classes
+- Fixed problem with videos in album playlists
+- Now using an internal HTTP server to retrieve Artist Fanart from TIDAL server
+
+v2.0.0-beta20 (2020-04-18)
+- Added Videos to "Suggestions for me"
+- Fixed missing "Explicit" status in Album Playlists
+- Fixed number of tracks and videos for user playlists
+
+v2.0.0-beta19 (2019-09-13)
+- New login token for MQA playback
+- Fixes:
+  - user_playlist_toggle() and favorite_toggle() get correct id numbers now
+  - Changed playlists are now detected correctly to refresh the Playlist Cache
+
+v2.0.0-beta18 (2018-12-31)
+- Fixed Artist Bio
+- Using new SquareImage property of Playlists as Cover Image
+- Removed TIDAL Discovery, because it is not supported anymore
+- Added Menu "Suggestions for me" to show Suggestions from the TIDAL Homepage
+- Show "Release Date: mm/dd/yyyy" in label if album release date is in future
+  and Addon Setting "Show Album Year in Labels" is enabled.
+- First Changes für Kodi 18.x compatibility:
+  - BusyDialog is not allowed anymore, using DialogProgressBG instead
+  - xbmc.abortRequested is depricated, now using xbmc.Monitor().waitForAbort()
+  - Adding 'music' infos to Video items
+  - Removed '%s' from any line in strings.xml
+  - Plugin folder items now end with '/', otherwise ActivateWindow() in favorites won't work
+
+v2.0.0-beta17 (2018-06-09)
+- Artists can now be locked for "Search for New Music"
+
+v2.0.0-beta16 (2017-09-18)
+- Fixed Unicode problem if Windows user name contains special characters
+- Added Context Menu Function "Clear Playlist" to remove all items from a User Playlist
+
+v2.0.0-beta15 (2017-07-01)
+- TIDAL now returns a flag for MQA Master for each Track and Album
+- New Folder "Master Playlists (MQA)"
+- Changed method to retrieve the Video stream URL (TIDAL changed the query URL)
+- Inserted Track version into its title
+- Included Addon-Settings to main menu
+
+v2.0.0-beta14 (2017-04-06)
+- Fixed "RTMP-Protocol for High/Low Quality" for Kodi Krypton
+  (Krypton can decode RTMP Audio Streams without the inputstream.rtmp Addon)
+- Fixed Video Playback if the Android Login Token is used (FLAC 16-Bit Mode)
+- New Option to enable HTTP Video Streaming instead of HLS (max. resolution is 720p)
+- Added a Service which asks for a re-login if Streaming Options are changed
+  (only for Kodi versions >= 16.1)
+
+v2.0.0-beta13 (2017-04-04)
+- Mark Favorite Artists in Favorite Albums and Favorite Tracks lists
+- Fixed problem with Playlists without description
+- Cleanup Debug-Logging code
+- Fixed loop problem if a Playlist or Album contains less items as specified
+
+v2.0.0-beta12 (2017-02-27)
+- Backward Compatibility down to XBMC Gotham 13.2
+- Use item infos "userrating" and "mediatype" only on Krypton version
+- Moved lib folder into resources for new Krypton Addon file structure
+
+v2.0.0-beta11 (2017-02-17)
+- Fixes in ALbum Playlist handling:
+  - Add first available track into Album Playlist and not with album_id + 1
+  - Sorting Playlist by Artist, Year, Title when Album Playlist is copied into a new Playlist
+- Prevent update of the Favorites cache file if Favorites are unchanged
+- Fixed problem with Recommended Tracks/Videos and Track/Artist Radio
+- Changes for Krypton:
+  - Set ListItem.UserRating with TIDAL Rating
+  - Set "mediatype" in ListItems for artists/albums/songs/musicvideos
+
+v2.0.0-beta10 (2017-01-30)
+- Now shows an Error Message if login fails
+- Added Page-Mode for Playlist-Item View
+- Increased max. page size from 999 to 9999
+- Bugfix: MQA Label extension was missing in Favorite Tracks
+- Emulation of "User Album Playlists":
+  a) Shows Album List instead of Tracks if Playlist description contains the keyword ALBUM
+  b) "Default Album Playlist" can be set for Plugin function "user_playlist_toggle"
+  c) Shows User Album Playlist Name in Album Label
+  d) New Context Menu Entries for Album Items to Add/Remove Albums to/from Album Playlists
+  e) Every Playlist can be opend as "Album Playlist" with a new Context Menu Entry
+
+v2.0.0-beta9 (2017-01-21)
+- Page mode for Master Albums folder
+- Set MQA in blue color into Labels of Master Albums and Tracks
+- Keep Username for next login if password is not saved into settings
+
+v2.0.0-beta8 (2017-01-18)
+- Support for Master Quality Audio (MQA)
+- Support for Apple Lossless Audio (ALAC)
+- Added RTMP Streaming for HIGH/LOW Quality
+- Added "Master Albums" folder to the "What's New" folder
+- Add "(MQA)" to Labels of Master Albums
+- Playing Edited Tracks (new in TIDAL iOS App)
+
+v2.0.0-beta7 (2016-11-23)
+- Support for Videos in Albums
+- Optimized Album Buffer Cache
+
+v2.0.0-beta6 (2016-10-25)
+- Fixed Search functions to work with Krypton
+
+v2.0.0-beta5 (2016-10-22)
+- Fixed GetDirectory() error for Search functions and other Folders
+  which don't show a list (Artist bio).
+- Settings to enable/disable colors and marked favorites in labels
+- Mark Favorites as <label text> instead of Bold if color mode is disabled
+  because the Kodi Remote Apps don't support Kodi format tags in labels.
+- Show User Playlists in labels of Promotion Video items.
+- Setting to enable/disable User Playlist names in labels
+- Context Menu "Open Playlist (Audio only)" to play only audio for videos in playlists.
+- Preparations for Kodi Krypton
+
+v2.0.0-beta4
+- Renamed to TIDAL2 (from plugin.audio.wimp to plugin.audio.tidal2)
+- Create/Edit/Delete User Playlist
+- Add/Remove Items from Favorites
+- Cache files for UserPlaylists and Favorites
+- Name of User Playlists in Labels if Track/Video is a playlist item
+- Favorites are marked in Labels
+- Colored Labels:
+  a) Folders are Blue
+  b) Favorites are Yellow
+  c) User Playlists are Green
+  d) Locked Streams are Red
+- Cache for Album Data for correct year in Track items
+
+v1.3.0 (unreleased)
+- Using new Login-Token for all content
+- Added Video playback
+- Seperate settings for Subscription Type, Music Quality and Video Quality
+- Added Support to edit Favorites and User Playlists
+- Added Recommended Tracks/Videos to context menue
+- Added Artist Bio on artist page
+- Added Setting "Max. number of list items per page"
+- Added German translation
+- Added Trial Mode (30 seconds playback without login)
+
+v1.2.2
+- Fixed album listing due to site changes
+
+v1.2.0
+- WiMP is now TIDAL: changed name and branding
+- Added album year info
+- Fixed featured albums view
+
+v1.1.1
+- Fixed playback of streams served from tidal
+- Improved login functionality
+- Changed search dialog to a directory
+
+v1.1.0
+- Added TIDAL support
+- Added Lossless support
+- Added "What's New", "Moods" and genre browsing
+- Added options for saving username/password in settings
